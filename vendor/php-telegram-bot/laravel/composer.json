@@ -1,0 +1,55 @@
+{
+    "name": "php-telegram-bot/laravel",
+    "description": "Integrates PHP Telegram Bot into Laravel.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Avtandil Kikabidze aka LONGMAN",
+            "email": "akalongman@gmail.com",
+            "homepage": "http://longman.me",
+            "role": "Maintainer, Developer"
+        },
+        {
+            "name": "Tii",
+            "email": "mail@tii.one",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/php-telegram-bot/laravel",
+    "keywords": ["laravel", "telegram", "bot"],
+    "require": {
+        "illuminate/support": "~7|~8|~9|~10",
+        "longman/telegram-bot": "^0.81",
+        "ext-pcntl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "symfony/process": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpTelegramBot\\Laravel\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+              "PhpTelegramBot\\Laravel\\TelegramServiceProvider"
+            ],
+            "aliases": {
+                "CallbackButton": "PhpTelegramBot\\Laravel\\Facades\\CallbackButton",
+                "Telegram": "PhpTelegramBot\\Laravel\\Facades\\Telegram"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
